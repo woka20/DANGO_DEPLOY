@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+   <div class="col-6 home">
+       <p id="pertama">Click here to submit produk:<a href="{% url 'submit'%}">Here</a></p> 
+       {% for i in produks %}
+       <div>
+           <img src="{{i.gambar}}"/>
+           </br>
+           <p>{{i.nama}}</p>
+
+           <p>{{i.harga}}</p>
+           
+           <a href="{{i.id}}">Lihat Detail</a>
+       </div>
+       {% endfor %}
+   </div>
+
+{% endblock %}

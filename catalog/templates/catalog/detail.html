@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="box-detail">
+       {% for p in daftar%}
+       <img src="{{p.gambar}}"/>
+       <h5><strong>{{p.nama}}</strong></h5>
+       <p>{{p.harga}}</p>
+       
+           <li>p.deskripsi</li>
+        
+       </ul>
+
+       </br>
+       {% endfor %}
+   </div>
+
+{% endblock%}

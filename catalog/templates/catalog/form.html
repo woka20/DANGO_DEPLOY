@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    
+    <form method="POST", action="{% url 'todb' %}">
+        <h3 class="h3-form">Submit Produk</h3>
+        {% csrf_token%}
+        <label id="nama_post">What is your produk?</label>
+        </br>
+        <input type="text" name="nama_post" id="nama_post"></input></br>
+
+        <label id="harga_post">What is your price?</label>
+        </br>
+        <input type="text" name="harga_post" id="harga_post"></input></br>
+
+        <label id="list_barang">What is your decription?</label>
+        </br>
+        <input type="text" name="list_barang" id="list_barang"></input></br>
+
+        <label id="gambar_post">Your Image URL</label>
+        </br>
+        <input type="text" name="gambar_post" id="gambar_post"></input></br>
+        </br>
+        
+        <button type="submit">SAVE</button>
+    </form>
+{% endblock %}
